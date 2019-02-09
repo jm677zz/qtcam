@@ -100,6 +100,8 @@ Then double click the downloaded binary and install it to your local system.
  In ubuntu 16.04,
  $ sudo apt-get install libv4l-dev qt5-default libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavresample-dev libudev-dev libavcodec-extra  qtdeclarative5-dev libusb-1.0-0-dev libjpeg-turbo8-dev qtdeclarative5-window-plugin qtdeclarative5-dialogs-plugin qtdeclarative5-controls-plugin  qtdeclarative5-qtquick2-plugin
 
+ In Fedora 29,
+ $ sudo dnf install -y libv4l-devel qt5-devel qtav-devel systemd-devel libusb-devel turbojpeg-devel ffmpeg-devel libevdev-devel
  
 
 3.3 Build the application
@@ -120,7 +122,7 @@ You can build your application in two ways
 1.  Goto your git clone path.
 2.  cd src/
 3.  Set LAUNCHPAD macro in common.h to 0.
-4.  qmake,(For example, /home/@user/Qt5.2.1/5.2.1/gcc_64/bin/qmake)
+4.  qmake,(For example, /home/@user/Qt5.2.1/5.2.1/gcc_64/bin/qmake, or /usr/bin/qmake-qt5)
 5.  make clean
 6.  make
 7.  Execute the application.

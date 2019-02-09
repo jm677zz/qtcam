@@ -56,7 +56,7 @@ bool H264Decoder::initH264Decoder(unsigned width, unsigned height)
     avcodec_get_context_defaults(pH264CodecCtx);
 #endif
 
-    pH264CodecCtx->flags2 |= CODEC_FLAG2_FAST;
+    pH264CodecCtx->flags2 |= AV_CODEC_FLAG2_FAST;
 
 #if !LIBAVCODEC_VER_AT_LEAST(54, 25)
     pH264CodecCtx->pix_fmt = PIX_FMT_YUV420P;
